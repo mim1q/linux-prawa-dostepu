@@ -43,19 +43,93 @@
                     </section>
                     <section id="index-s3">
                         <h2>Zmiana praw dostępu do plików</h2>
+                        <p class="link"><a href="./generator.html">Generator polecenia 
+                            <span class="code">chmod</span>
+                        </a></p>
                         <section id="index-s3-1">
                             <h3>Modyfikacja uprawnień poleceniem <span class="code">chmod</span></h3>
+                            <p>
+                                Prawa dostępu do pliku można zmienić używając polecenia 
+                                <span class="code">chmod</span>.
+                            </p>
+                            <p>
+                                Aby dodać prawo do odczytu po komendzie chmod wpisujemy 
+                                <span class="code">+r</span>, a następnie nazwę pliku. Podobnie w przypadku praw do zapisu - 
+                                <span class="code">+w</span> oraz do wykonywania - 
+                                <span class="code">+x</span>.
+                            </p>
+                            <p>
+                                Aby odebrać któreś z praw należy zamiast znaku 
+                                <span class="code">+</span> użyć 
+                                <span class="code">-</span>.
+                            </p>
+                            <p>
+                                Prawa można przyznawać i odbierać selektywnie poszczególnym użytkownikom wpisując przed znakiem 
+                                <span class="code">+</span> lub 
+                                <span class="code">-</span> znak 
+                                <span class="code">u</span> (użytkownik), 
+                                <span class="code">g</span> (grupa), 
+                                <span class="code">o</span> (inni) lub
+                                <span class="code">a</span> (wszyscy).
+                            </p>
+                            <p>Powyższe zasady można dowolnie łączyć. (jeżeli chcemy wykonać różne operacje na różnych grupach użytkowników, oddzielamy je przecinkami)</p>
+                                
+                            <p>Przykłady użycia polecenia chmod:</p>
+                                <ul>
+                                    <li>
+                                        <span class="code">chmod u+rwx plik</span> - nadaj wszystkie uprawnienia właścicielowi pliku,
+                                    </li>
+                                    <li>
+                                        <span class="code">chmod ug+xw plik</span> - dodaj uprawnienia do wykonywania i zapisu do pliku właścicielowi i grupie,
+                                    </li>
+                                    <li>
+                                        <span class="code">chmod go-w,u+rw plik</span> - odbierz prawo do zapisu do pliku wszystkim poza właścicielem pliku, a dodaj właścicielowi prawo do zapisu i odczytu
+                                    </li>
+                                </ul>
+                            <p>
+                                Aby ustawić określone uprawnienia można użyć innej metody. Należy po znaku określającym danych użytkowników użyć znaku <span class="code">=</span>, a następnie wpisać odpowiednie znaki w taki sposób, w jaki wyświetla je polecenie <span class="code">ls -l</span>, czyli np.:
+                                <ul>
+                                    <li><span class="code">chmod u=r-x plik</span> - ustaw prawa właściciela pliku na możliwość oczytu i wykonywania pliku, ale nie zapisu,</li>
+                                    <li><span class="code">chmod u=rwx,g=--x,o=--- plik</span> - ustaw właścicielowi wszystkie prawa, grupie tylko prawo do wykonywania, a innym odbierz wszystkie prawa.</li>
+                                </ul>
+                            </p>
                         </section>
                         <section id="index-s3-2">
                             <h3>Polecenie <span class="code">chmod</span> z systemem ósemkowym</h3>
+                            <p>Aby ustawić wszystkie uprawnienia na raz, można użyć innego sposobu zapisu. Robi się to wpisując trzy cyfry, odpowiadające kolejno uprawnieniom użytkownika, grupy oraz innych, według następujących zasad:</p>
+                            <ul>
+                                <li><span class="code">rwx</span> - 7,</li>
+                                <li><span class="code">rw-</span> - 6,</li>
+                                <li><span class="code">r-x</span> - 5,</li>
+                                <li><span class="code">r--</span> - 4,</li>
+                                <li><span class="code">-wx</span> - 3,</li>
+                                <li><span class="code">-w-</span> - 2,</li>
+                                <li><span class="code">--x</span> - 1,</li>
+                                <li><span class="code">---</span> - 0</li>
+                            </ul>
+
+                            <p>Przykładowe sposoby użycia polecenia <span class="code">chmod</span> z systemem ósemkowym:</p>
+                            <ul>
+                                <li><span class="code">chmod 000 plik</span> - odbierz wszystkim wszystkie uprawnienia do pliku,</li>
+                                <li><span class="code">chmod 777 plik</span> - przyznaj wszystkim wszystkie uprawnienia,</li>
+                                <li><span class="code">chmod 640 plik</span> - przyznaj właścicielowi prawa do zapisu i odczytu, grupie tylko do odczytu, a pozostałym odbierz wszystkie prawa</li>
+                            </ul>
                         </section>
                         <section id="index-s3-3">
                             <h3>Zmiana właściciela i grupy pliku</h3>
+                            <p>Zmianę grupy przypisanej do pliku można dokonać poleceniem:</p>
+                            <span class="code">chmod u+s plik</span>
+                            <p>Na zmianę właściciela pliku pozwala polecenie:</p>
+                            <span class="code">chmod u+s plik</span>
                         </section>
                         <section id="index-s3-4">
                             <h3>Tryby suid i guid</h3>
+                            <p>Tryby suid i sgid to specjalne tryby dostępu do plików. Dzięki nim uruchamiając program można korzystać z niego tak, jakby było się jego właścicielem (w przypadku suid) lub jakby należało się do grupy przypisanej do pliku (w przypadku sgid). Jest to przydatne w przypadku, gdy jakiś program korzysta z innych programów, do których użycia konieczne są specjalne uprawnienia.</p>
+                            <p>Aby ustawić tryb suid należy użyć polecenia:</p>
+                            <span class="code">chgrp nazwa_grupy plik</span>
+                            <p>Natomiast aby ustawić tryb sgid należy wpisać:</p>
+                            <span class="code">chmod g+s plik</span>
                         </section>
-                        <p class="link"><a href="./generator.html">Generator poleceń</a></p>
                     </section>
                 </main>
             </div>
@@ -64,7 +138,7 @@
             <span>Autor: Dominik Ziętko kl. 2i1</span>
             <span>Centrum Edukacji Zawodowej w Stalowej Woli</span>
             <br>
-            <span>Źródło: <a href="https://developer.ibm.com/technologies/linux/tutorials/l-lpic1-104-5/">developer.ibm.com</a></span>
+            <span>Źródło informacji: <a href="https://developer.ibm.com/technologies/linux/tutorials/l-lpic1-104-5/">developer.ibm.com</a></span>
         </footer>
     </body>
 </html>
