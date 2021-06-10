@@ -3,4 +3,4 @@ System operacyjne
 Autor: Dominik Ziętko, kl. 2i1
 
 ## Dostęp do strony
-[Link do strony (Github Pages)](#)
+[Link do strony (Github Pages)](https://mim1q.github.io/linux-prawa-dostepu/)
