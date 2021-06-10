@@ -32,18 +32,26 @@ body {
 
 div.content-container {
     display: flex;
-    justify-content: center;
+    flex-direction: column;
+    align-items: center;
 
     margin: 20px;
     margin-bottom: 60px;
 }
 
-div.content {
+div.content-two-panels {
     display: flex;
     flex-direction: row-reverse;
     overflow: visible;
 
     max-width: 1000px;
+}
+
+div.content-container>main {
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    width: 1000px;
 }
 
 nav {
@@ -91,10 +99,14 @@ h2, h3 {
     margin: 40px 0 40px 0;
 }
 
-span.code {
+span.code, span.code * {
     display: inline-block;
     font-family: var(--code-font);
     background: var(--code-background);
+}
+
+span.bigcode {
+    font-size: 2rem;
 }
 
 ul {
@@ -116,4 +128,15 @@ a, a:visited {
 
 a:hover, a:hover * {
     text-decoration: underline;
+}
+
+a.back {
+    position: fixed;
+    top: 10px;
+    left: 10px;
+}
+
+a.checked {
+    text-decoration: underline;
+    color: var(--font-color);
 }
