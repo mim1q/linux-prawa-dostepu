@@ -60,6 +60,14 @@ nav {
     top: 0px;
 
     min-width: 30%;
+
+    
+}
+
+@media (max-width: 768px) {
+    nav {
+        display: none;
+    }
 }
 
 header {
@@ -73,7 +81,8 @@ footer {
     align-items: center;
 
     padding: 30px;
-
+    
+    text-align: center;
     background: var(--background-color-lighter);
 }
 
