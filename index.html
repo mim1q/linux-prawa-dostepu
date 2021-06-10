@@ -26,7 +26,7 @@
                             <li><a href="#index-s3-1">Modyfikacja uprawnień poleceniem <span class="code">chmod</span></a></li>
                             <li><a href="#index-s3-2">Polecenie <span class="code">chmod</span> z systemem ósemkowym</a></li>
                             <li><a href="#index-s3-3">Zmiana właściciela i grupy pliku</a></li>
-                            <li><a href="#index-s3-4">Tryby suid i guid</a></li>
+                            <li><a href="#index-s3-4">Tryby suid i sgid</a></li>
                         </ul>
                     </ul>
                 </nav>
@@ -123,7 +123,7 @@
                             <span class="code">chown uzytkownik plik</span>
                         </section>
                         <section id="index-s3-4">
-                            <h3>Tryby suid i guid</h3>
+                            <h3>Tryby suid i sgid</h3>
                             <p>Tryby suid i sgid to specjalne tryby dostępu do plików. Dzięki nim uruchamiając program można korzystać z niego tak, jakby było się jego właścicielem (w przypadku suid) lub jakby należało się do grupy przypisanej do pliku (w przypadku sgid). Jest to przydatne w przypadku, gdy jakiś program korzysta z innych programów, do których użycia konieczne są specjalne uprawnienia.</p>
                             <p>Aby ustawić tryb suid należy użyć polecenia:</p>
                             <span class="code">chmod u+s plik</span>
