@@ -5,7 +5,8 @@
     --background-color: #181717;
     --background-color-lighter: #252325;
     --font-color: #eeeeee;
-    --heading-color: #eb934b;
+    --heading-color: #ff9f50;
+    --link-color: #ff9f50;
     --shadow-color: #00000040;
 }
 
@@ -73,6 +74,7 @@ footer, header {
 p {
     text-align: justify;
     line-height: 1.35em;
+    margin: 40px 0px 40px 0px;
 }
 
 h1 {
@@ -101,7 +103,7 @@ p.link {
 }
 
 a, a:visited {
-    color: var(--heading-color);
+    color: var(--link-color);
     text-decoration: none;
 }
 
