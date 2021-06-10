@@ -46,7 +46,7 @@ div.content {
     max-width: 1000px;
 }
 
-navbar {
+nav {
     align-self: flex-start;
     position: sticky;
     top: 0px;
