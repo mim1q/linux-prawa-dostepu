@@ -1,6 +1,6 @@
 <!DOCTYPE html>
 
-<html lang="pl">
+<html lang="pl"">
     <head>
         <meta charset="UTF-8">
         <meta name="author" content="Dominik Ziętko">
@@ -10,6 +10,9 @@
         <link rel="preconnect" href="https://fonts.gstatic.com">
         <link rel="preconnect" href="https://fonts.gstatic.com">
         <link href="https://fonts.googleapis.com/css2?family=Ubuntu+Mono:ital,wght@0,400;0,700;1,400;1,700&family=Ubuntu:ital,wght@0,300;0,500;1,300;1,500&display=swap" rel="stylesheet">
+        <!-- JQuery -->
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js" integrity="sha512-894YE6QWD5I59HgZOGReFYm4dnWc1Qt5NtvYSaNcOP+u1T9qYdvdihz0PPSiiqn/+/3e7Jo4EaG7TubfWGUrMQ==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+        <script src="js/command.js"></script>
     </head>
     <body>
         <a class="back" href="index.html">< Wróć do strony głównej</a>
@@ -19,18 +22,70 @@
         <div class="content-container">
             <p>Kliknij na dowolną część wyniku polecenia <span class="code">ls -l plik</span>, aby zobaczyć jej znaczenie</p>
             <span class="code bigcode">
-                <a href="#">d</a><a href="#">rwx</a><a href="#">r-x</a>
-                <a href="#" class="checked">r-x</a>
-                <a href="#">2</a>
-                <a href="#">user</a>
-                <a href="#">grupa</a>
-                <a href="#">2048</a>
-                <a href="#">plik</a>
+                <a href class="code-part" onclick="change_part(1)">d</a><a href class="code-part" onclick="change_part(2)" >rwx</a><a href class="code-part" onclick="change_part(3)" >r-x</a><a href class="code-part" onclick="change_part(4)" >r-x</a>
+                <a href class="code-part" onclick="change_part(5)" >2</a>
+                <a href class="code-part" onclick="change_part(6)" >user</a>
+                <a href class="code-part" onclick="change_part(7)" >grupa</a>
+                <a href class="code-part" onclick="change_part(8)" >4.5M</a>
+                <a href class="code-part" onclick="change_part(9)" >Jan 5 00:15</a>
+                <a href class="code-part" onclick="change_part(10)" >plik</a>
             </span>
             <main>
-                <p>
-                    a a a a a a a a a a a a a a 
-                </p>
+                <section class="part-description">
+                    <ul>
+                        <li><span class="code">-</span> &mdash; zwykły plik</li>
+                        <li><span class="code">d</span> &mdash; katalog</li>
+                        <li><span class="code">l</span> &mdash; dowiązanie symboliczne</li>
+                        <li><span class="code">c</span> &mdash; plik urządzenia (znakowe)</li>
+                        <li><span class="code">b</span> &mdash; plik urządzenia (blokowe)</li>
+                        <li><span class="code">p</span> &mdash; kolejka FIFO</li>
+                        <li><span class="code">s</span> &mdash; gniazdo (socket)</li>
+                    </ul>
+                </section>
+                <section class="part-description">
+                    <p>Prawa dostępu właściciela pliku</p>
+                    <ul>
+                        <li><span class="code">r</span> &mdash; prawo do oczytu</li>
+                        <li><span class="code">w</span> &mdash; prawo do zapisu</li>
+                        <li><span class="code">x</span> &mdash; prawo do wykonywania</li>
+                        <li><span class="code">s</span> &mdash; tryb suid</li>
+                    </ul>
+                </section>
+                <section class="part-description">
+                    <p>Prawa dostępu grupy przypisanej do pliku</p>
+                    <ul>
+                        <li><span class="code">r</span> &mdash; prawo do oczytu</li>
+                        <li><span class="code">w</span> &mdash; prawo do zapisu</li>
+                        <li><span class="code">x</span> &mdash; prawo do wykonywania</li>
+                        <li><span class="code">s</span> &mdash; tryb sgid</li>
+                    </ul>
+                </section>
+                <section class="part-description">
+                    <p>Prawa dostępu pozostałych użytkowników</p>
+                    <ul>
+                        <li><span class="code">r</span> &mdash; prawo do oczytu</li>
+                        <li><span class="code">w</span> &mdash; prawo do zapisu</li>
+                        <li><span class="code">x</span> &mdash; prawo do wykonywania</li>
+                    </ul>
+                </section>
+                <section class="part-description">
+                    <p>Liczba dowiązań symbolicznych prowadzących do pliku</p>
+                </section>
+                <section class="part-description">
+                    <p>Właściciel pliku</p>
+                </section>
+                <section class="part-description">
+                    <p>Grupa przypisana do pliku</p>
+                </section>
+                <section class="part-description">
+                    <p>Rozmiar pliku</p>
+                </section>
+                <section class="part-description">
+                    <p>Data modyfikacji</p>
+                </section>
+                <section class="part-description">
+                    <p>Nazwa pliku</p>
+                </section>
             </main>
         </div>
     </body>

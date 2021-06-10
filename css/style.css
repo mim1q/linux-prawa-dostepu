@@ -140,3 +140,11 @@ a.checked {
     text-decoration: underline;
     color: var(--font-color);
 }
+
+.part-description {
+    display: none;
+}
+
+.part-description.shown {
+    display: block;
+}

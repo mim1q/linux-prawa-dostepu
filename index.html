@@ -118,15 +118,15 @@
                         <section id="index-s3-3">
                             <h3>Zmiana właściciela i grupy pliku</h3>
                             <p>Zmianę grupy przypisanej do pliku można dokonać poleceniem:</p>
-                            <span class="code">chmod u+s plik</span>
+                            <span class="code">chgrp nazwa_grupy plik</span>
                             <p>Na zmianę właściciela pliku pozwala polecenie:</p>
-                            <span class="code">chmod u+s plik</span>
+                            <span class="code">chown uzytkownik plik</span>
                         </section>
                         <section id="index-s3-4">
                             <h3>Tryby suid i guid</h3>
                             <p>Tryby suid i sgid to specjalne tryby dostępu do plików. Dzięki nim uruchamiając program można korzystać z niego tak, jakby było się jego właścicielem (w przypadku suid) lub jakby należało się do grupy przypisanej do pliku (w przypadku sgid). Jest to przydatne w przypadku, gdy jakiś program korzysta z innych programów, do których użycia konieczne są specjalne uprawnienia.</p>
                             <p>Aby ustawić tryb suid należy użyć polecenia:</p>
-                            <span class="code">chgrp nazwa_grupy plik</span>
+                            <span class="code">chmod u+s plik</span>
                             <p>Natomiast aby ustawić tryb sgid należy wpisać:</p>
                             <span class="code">chmod g+s plik</span>
                         </section>
