@@ -3,9 +3,10 @@
     --main-font: 'Ubuntu', sans-serif;
     --code-font: 'Ubuntu Mono', monospace;
     --background-color: #181717;
-    --background-color-lighter: #29252b;
+    --background-color-lighter: #252325;
     --font-color: #eeeeee;
     --heading-color: #eb934b;
+    --shadow-color: #00000040;
 }
 
 body {
@@ -26,6 +27,8 @@ body {
 div.content-container {
     display: flex;
     justify-content: center;
+
+    margin: 20px;
 }
 
 div.content {
@@ -36,6 +39,10 @@ div.content {
     max-width: 1000px;
 }
 
+main {
+    padding-right: 20px;
+}
+
 navbar {
     align-self: flex-start;
     position: sticky;
@@ -44,11 +51,8 @@ navbar {
     min-width: 30%;
 }
 
-navbar, main {
-    padding: 20px;
-}
-
 header {
+    padding: 20px;
     background: var(--background-color-lighter);
 }
 
@@ -62,8 +66,13 @@ footer {
     background: var(--background-color-lighter);
 }
 
+footer, header {
+    box-shadow: 0px 0px 25px 0px var(--shadow-color);
+}
+
 p {
     text-align: justify;
+    line-height: 1.35em;
 }
 
 h1 {
@@ -83,8 +92,12 @@ ul {
     list-style-type: none;
 }
 
-a::before {
-    content: '> ';
+li {
+    padding-bottom: 10px;
+}
+
+p.link {
+    text-align: center;
 }
 
 a, a:visited {
