@@ -79,6 +79,14 @@ span.code {
     font-family: var(--code-font);
 }
 
+ul {
+    list-style-type: none;
+}
+
+a::before {
+    content: '> ';
+}
+
 a, a:visited {
     color: var(--heading-color);
     text-decoration: none;
