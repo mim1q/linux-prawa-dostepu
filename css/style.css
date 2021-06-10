@@ -1,19 +1,39 @@
 :root {
-    font-size: 18px;
+    font-size: 20px;
+    --main-font: 'Ubuntu', sans-serif;
+    --code-font: 'Ubuntu Mono', monospace;
+    --background-color: #181717;
+    --background-color-lighter: #29252b;
+    --font-color: #eeeeee;
+    --heading-color: #eb934b;
 }
 
 body {
     display: flex;
     flex-direction: column;
-    align-items: center;
+    align-items: stretch;
+    
+    margin: 0;
+
+    background: var(--background-color);
+
+    font-family: var(--main-font);
+    color: var(--font-color);
+    font-weight: 200;
+    letter-spacing: 0.02em;
 }
 
-div.main-container {
+div.content-container {
+    display: flex;
+    justify-content: center;
+}
+
+div.content {
     display: flex;
     flex-direction: row-reverse;
     overflow: visible;
 
-    width: 1000px;
+    max-width: 1000px;
 }
 
 navbar {
@@ -21,11 +41,49 @@ navbar {
     position: sticky;
     top: 0px;
 
-    min-width: 300px;
+    min-width: 30%;
+}
+
+navbar, main {
+    padding: 20px;
+}
+
+header {
+    background: var(--background-color-lighter);
 }
 
 footer {
     display: flex;
     flex-direction: column;
     align-items: center;
+
+    padding: 20px;
+
+    background: var(--background-color-lighter);
+}
+
+p {
+    text-align: justify;
+}
+
+h1 {
+    text-align: center;
+}
+
+h1, h2, h3 {
+    font-weight: 600;
+    color: var(--heading-color);
+}
+
+span.code {
+    font-family: var(--code-font);
+}
+
+a, a:visited {
+    color: var(--heading-color);
+    text-decoration: none;
+}
+
+a:hover {
+    text-decoration: underline;
 }

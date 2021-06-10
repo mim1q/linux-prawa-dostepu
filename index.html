@@ -7,55 +7,64 @@
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <title>Linux - prawa dostępu do plików i katalogów</title>
         <link rel="stylesheet" href="css/style.css">
+        <link rel="preconnect" href="https://fonts.gstatic.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com">
+        <link href="https://fonts.googleapis.com/css2?family=Ubuntu+Mono:ital,wght@0,400;0,700;1,400;1,700&family=Ubuntu:ital,wght@0,300;0,500;1,300;1,500&display=swap" rel="stylesheet">
     </head>
     <body>
         <header>
             <h1>Linux - prawa dostępu do plików i katalogów</h1>
         </header>
-        <navbar>
-            <ul>
-                <li><a href="#index-s1">Do czego służą prawa dostępu</a></li>
-                <li><a href="#index-s2">Przynależność i prawa dostępu do plików</a></li>
-                <li><a href="#index-s3">Zmiana praw dostępu do plików</a></li>
-                <ul>
-                    <li><a href="#index-s3-1">Modyfikacja uprawnień poleceniem chmod</a></li>
-                    <li><a href="#index-s3-2">Polecenie chmod z systemem ósemkowym</a></li>
-                    <li><a href="#index-s3-3">Zmiana właściciela i grupy pliku</a></li>
-                    <li><a href="#index-s3-4">Tryby suid i guid</a></li>
-                </ul>
-            </ul>
-        </navbar>
-        <main>
-            <section id="index-s1">
-                <h2>Do czego służą prawa dostępu</h2>
-                <p>Linux jest systemem przystosowanym do pracy wielu użytkowników na jednym urządzeniu. Z tego powodu konieczne bywa zabezpieczenie plików przed dostępem nieuprawnionych osób. Służą do tego prawa dostępu, które pomagają określić, którzy użytkownicy mogą wyświetlać, modyfikować bądź uruchamiać określony plik.</p>
-            </section>
-            <section id="index-s2">
-                <h2>Przynależność i prawa dostępu do plików</h2>
-                <p>Każdy użytkownik w systemie Linux posiada swoje unikatowe ID oraz należy do jednej głównej grupy. Sytuacja jest analogiczna w przypadku plików - każdy plik ma przypisanego jednego właściciela oraz jedną grupę.</p>
-                <p>Żeby sprawdzić uprawnienia pliku oraz jego przynależność należy użyć polecenia ls -l.</p>
-                <button>Polecenie ls -l</button>
-            </section>
-            <section id="index-s3">
-                <h2>Zmiana praw dostępu do plików</h2>
-                <section id="index-s3-1">
-                    <h3>Modyfikacja uprawnień poleceniem chmod</h3>
-                </section>
-                <section id="index-s3-2">
-                    <h3>Polecenie chmod z systemem ósemkowym</h3>
-                </section>
-                <section id="index-s3-3">
-                    <h3>Zmiana właściciela i grupy pliku</h3>
-                </section>
-                <section id="index-s3-4">
-                    <h3>Tryby suid i guid</h3>
-                </section>
-                <button>Generator poleceń</button>
-            </section>
-        </main>
+        <div class="content-container">
+            <div class="content">
+                <navbar>
+                    <ul>
+                        <li><a href="#index-s1">Do czego służą prawa dostępu</a></li>
+                        <li><a href="#index-s2">Przynależność i prawa dostępu do plików</a></li>
+                        <li><a href="#index-s3">Zmiana praw dostępu do plików</a></li>
+                        <ul>
+                            <li><a href="#index-s3-1">Modyfikacja uprawnień poleceniem <span class="code">chmod</span></a></li>
+                            <li><a href="#index-s3-2">Polecenie <span class="code">chmod</span> z systemem ósemkowym</a></li>
+                            <li><a href="#index-s3-3">Zmiana właściciela i grupy pliku</a></li>
+                            <li><a href="#index-s3-4">Tryby suid i guid</a></li>
+                        </ul>
+                    </ul>
+                </navbar>
+                <main>
+                    <section id="index-s1">
+                        <h2>Do czego służą prawa dostępu</h2>
+                        <p>Linux jest systemem przystosowanym do pracy wielu użytkowników na jednym urządzeniu. Z tego powodu konieczne bywa zabezpieczenie plików przed dostępem nieuprawnionych osób. Służą do tego prawa dostępu, które pomagają określić, którzy użytkownicy mogą wyświetlać, modyfikować bądź uruchamiać określony plik.</p>
+                    </section>
+                    <section id="index-s2">
+                        <h2>Przynależność i prawa dostępu do plików</h2>
+                        <p>Każdy użytkownik w systemie Linux posiada swoje unikatowe ID oraz należy do jednej głównej grupy. Sytuacja jest analogiczna w przypadku plików - każdy plik ma przypisanego jednego właściciela oraz jedną grupę.</p>
+                        <p>Żeby sprawdzić uprawnienia pliku oraz jego przynależność należy użyć polecenia <span class="code">ls -l</span>.</p>
+                        <button>Polecenie <span class="code">ls -l</span></button>
+                    </section>
+                    <section id="index-s3">
+                        <h2>Zmiana praw dostępu do plików</h2>
+                        <section id="index-s3-1">
+                            <h3>Modyfikacja uprawnień poleceniem <span class="code">chmod</span></h3>
+                        </section>
+                        <section id="index-s3-2">
+                            <h3>Polecenie <span class="code">chmod</span> z systemem ósemkowym</h3>
+                        </section>
+                        <section id="index-s3-3">
+                            <h3>Zmiana właściciela i grupy pliku</h3>
+                        </section>
+                        <section id="index-s3-4">
+                            <h3>Tryby suid i guid</h3>
+                        </section>
+                        <button>Generator poleceń</button>
+                    </section>
+                </main>
+            </div>
+        </div>
         <footer>
             <span>Autor: Dominik Ziętko kl. 2i1</span>
             <span>Centrum Edukacji Zawodowej w Stalowej Woli</span>
+            <br>
+            <span>Źródło: <a href="https://developer.ibm.com/technologies/linux/tutorials/l-lpic1-104-5/">developer.ibm.com</a></span>
         </footer>
     </body>
 </html>
