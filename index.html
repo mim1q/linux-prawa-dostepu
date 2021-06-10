@@ -37,7 +37,7 @@
                     </section>
                     <section id="index-s2">
                         <h2>Przynależność i prawa dostępu do plików</h2>
-                        <p>Każdy użytkownik w systemie Linux posiada swoje unikatowe ID oraz należy do jednej głównej grupy. Sytuacja jest analogiczna w przypadku plików - każdy plik ma przypisanego jednego właściciela oraz jedną grupę.</p>
+                        <p>Każdy użytkownik w systemie Linux posiada swoje unikatowe ID oraz należy do jednej głównej grupy. Sytuacja jest analogiczna w przypadku plików &mdash; każdy plik ma przypisanego jednego właściciela oraz jedną grupę.</p>
                         <p>Żeby sprawdzić uprawnienia pliku oraz jego przynależność należy użyć polecenia <span class="code">ls -l</span>.</p>
                         <p class="link"><a href="./command.html">Polecenie <span class="code">ls -l</span></a></p>
                     </section>
@@ -54,8 +54,8 @@
                             </p>
                             <p>
                                 Aby dodać prawo do odczytu po komendzie chmod wpisujemy 
-                                <span class="code">+r</span>, a następnie nazwę pliku. Podobnie w przypadku praw do zapisu - 
-                                <span class="code">+w</span> oraz do wykonywania - 
+                                <span class="code">+r</span>, a następnie nazwę pliku. Podobnie w przypadku praw do zapisu &mdash;
+                                <span class="code">+w</span> oraz do wykonywania &mdash; 
                                 <span class="code">+x</span>.
                             </p>
                             <p>
@@ -77,20 +77,20 @@
                             <p>Przykłady użycia polecenia chmod:</p>
                                 <ul>
                                     <li>
-                                        <span class="code">chmod u+rwx plik</span> - nadaj wszystkie uprawnienia właścicielowi pliku,
+                                        <span class="code">chmod u+rwx plik</span> &mdash; nadaj wszystkie uprawnienia właścicielowi pliku,
                                     </li>
                                     <li>
-                                        <span class="code">chmod ug+xw plik</span> - dodaj uprawnienia do wykonywania i zapisu do pliku właścicielowi i grupie,
+                                        <span class="code">chmod ug+xw plik</span> &mdash; dodaj uprawnienia do wykonywania i zapisu do pliku właścicielowi i grupie,
                                     </li>
                                     <li>
-                                        <span class="code">chmod go-w,u+rw plik</span> - odbierz prawo do zapisu do pliku wszystkim poza właścicielem pliku, a dodaj właścicielowi prawo do zapisu i odczytu
+                                        <span class="code">chmod go-w,u+rw plik</span> &mdash; odbierz prawo do zapisu do pliku wszystkim poza właścicielem pliku, a dodaj właścicielowi prawo do zapisu i odczytu
                                     </li>
                                 </ul>
                             <p>
                                 Aby ustawić określone uprawnienia można użyć innej metody. Należy po znaku określającym danych użytkowników użyć znaku <span class="code">=</span>, a następnie wpisać odpowiednie znaki w taki sposób, w jaki wyświetla je polecenie <span class="code">ls -l</span>, czyli np.:
                                 <ul>
-                                    <li><span class="code">chmod u=r-x plik</span> - ustaw prawa właściciela pliku na możliwość oczytu i wykonywania pliku, ale nie zapisu,</li>
-                                    <li><span class="code">chmod u=rwx,g=--x,o=--- plik</span> - ustaw właścicielowi wszystkie prawa, grupie tylko prawo do wykonywania, a innym odbierz wszystkie prawa.</li>
+                                    <li><span class="code">chmod u=r-x plik</span> &mdash; ustaw prawa właściciela pliku na możliwość oczytu i wykonywania pliku, ale nie zapisu,</li>
+                                    <li><span class="code">chmod u=rwx,g=--x,o=--- plik</span> &mdash; ustaw właścicielowi wszystkie prawa, grupie tylko prawo do wykonywania, a innym odbierz wszystkie prawa.</li>
                                 </ul>
                             </p>
                         </section>
@@ -98,21 +98,21 @@
                             <h3>Polecenie <span class="code">chmod</span> z systemem ósemkowym</h3>
                             <p>Aby ustawić wszystkie uprawnienia na raz, można użyć innego sposobu zapisu. Robi się to wpisując trzy cyfry, odpowiadające kolejno uprawnieniom użytkownika, grupy oraz innych, według następujących zasad:</p>
                             <ul>
-                                <li><span class="code">rwx</span> - 7,</li>
-                                <li><span class="code">rw-</span> - 6,</li>
-                                <li><span class="code">r-x</span> - 5,</li>
-                                <li><span class="code">r--</span> - 4,</li>
-                                <li><span class="code">-wx</span> - 3,</li>
-                                <li><span class="code">-w-</span> - 2,</li>
-                                <li><span class="code">--x</span> - 1,</li>
-                                <li><span class="code">---</span> - 0</li>
+                                <li><span class="code">rwx</span> &mdash; 7,</li>
+                                <li><span class="code">rw-</span> &mdash; 6,</li>
+                                <li><span class="code">r-x</span> &mdash; 5,</li>
+                                <li><span class="code">r--</span> &mdash; 4,</li>
+                                <li><span class="code">-wx</span> &mdash; 3,</li>
+                                <li><span class="code">-w-</span> &mdash; 2,</li>
+                                <li><span class="code">--x</span> &mdash; 1,</li>
+                                <li><span class="code">---</span> &mdash; 0</li>
                             </ul>
 
                             <p>Przykładowe sposoby użycia polecenia <span class="code">chmod</span> z systemem ósemkowym:</p>
                             <ul>
-                                <li><span class="code">chmod 000 plik</span> - odbierz wszystkim wszystkie uprawnienia do pliku,</li>
-                                <li><span class="code">chmod 777 plik</span> - przyznaj wszystkim wszystkie uprawnienia,</li>
-                                <li><span class="code">chmod 640 plik</span> - przyznaj właścicielowi prawa do zapisu i odczytu, grupie tylko do odczytu, a pozostałym odbierz wszystkie prawa</li>
+                                <li><span class="code">chmod 000 plik</span> &mdash; odbierz wszystkim wszystkie uprawnienia do pliku,</li>
+                                <li><span class="code">chmod 777 plik</span> &mdash; przyznaj wszystkim wszystkie uprawnienia,</li>
+                                <li><span class="code">chmod 640 plik</span> &mdash; przyznaj właścicielowi prawa do zapisu i odczytu, grupie tylko do odczytu, a pozostałym odbierz wszystkie prawa</li>
                             </ul>
                         </section>
                         <section id="index-s3-3">
